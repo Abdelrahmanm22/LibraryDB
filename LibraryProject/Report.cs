@@ -19,9 +19,10 @@ namespace LibraryProject
 
         private void Report_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'libraryDBDataSet.Sale' table. You can move, or remove it, as needed.
+            this.SaleTableAdapter.Fill(this.libraryDBDataSet.Sale);
 
             this.reportViewer1.RefreshReport();
-            this.reportViewer2.RefreshReport();
         }
     }
 }

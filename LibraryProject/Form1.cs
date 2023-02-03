@@ -37,6 +37,7 @@ namespace LibraryProject
             sqlCommand.Connection = sqlConnection;
             sqlConnection.Open();
             sqlCommand.CommandText = "INSERT INTO UserSystem VALUES('"+textBox2.Text+"','"+textBox3.Text+"','"+textBox4.Text+"','"+textBox5.Text+"',"+textBox1.Text+");";
+            
             sqlCommand.ExecuteNonQuery();
             sqlConnection.Close();
         }
@@ -58,6 +59,42 @@ namespace LibraryProject
             this.Hide();
             SignUp signUp = new SignUp();
             signUp.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SqlConnection sqlConnection = new SqlConnection("Data Source=LAPTOP-4G1TI2F7;Initial Catalog=libraryDB;Integrated Security=True");
+            SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand.Connection = sqlConnection;
+            sqlConnection.Open();
+            sqlCommand.CommandText = "INSERT INTO Reader VALUES(" + textBox1.Text + ");";
+
+            sqlCommand.ExecuteNonQuery();
+            sqlConnection.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SqlConnection sqlConnection = new SqlConnection("Data Source=LAPTOP-4G1TI2F7;Initial Catalog=libraryDB;Integrated Security=True");
+            SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand.Connection = sqlConnection;
+            sqlConnection.Open();
+            sqlCommand.CommandText = "INSERT INTO Admin VALUES(" + textBox1.Text + ");";
+
+            sqlCommand.ExecuteNonQuery();
+            sqlConnection.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            SqlConnection sqlConnection = new SqlConnection("Data Source=LAPTOP-4G1TI2F7;Initial Catalog=libraryDB;Integrated Security=True");
+            SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand.Connection = sqlConnection;
+            sqlConnection.Open();
+            sqlCommand.CommandText = "INSERT INTO Author VALUES(" + textBox1.Text + ");";
+
+            sqlCommand.ExecuteNonQuery();
+            sqlConnection.Close();
         }
     }
 }

@@ -43,18 +43,21 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.libraryDBDataSet = new LibraryProject.libraryDBDataSet();
-            this.userSystemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userSystemTableAdapter = new LibraryProject.libraryDBDataSetTableAdapters.UserSystemTableAdapter();
             this.fnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userSystemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.libraryDBDataSet = new LibraryProject.libraryDBDataSet();
+            this.userSystemTableAdapter = new LibraryProject.libraryDBDataSetTableAdapters.UserSystemTableAdapter();
             this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSystemBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -193,20 +196,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(553, 352);
             this.dataGridView1.TabIndex = 14;
             // 
-            // libraryDBDataSet
-            // 
-            this.libraryDBDataSet.DataSetName = "libraryDBDataSet";
-            this.libraryDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // userSystemBindingSource
-            // 
-            this.userSystemBindingSource.DataMember = "UserSystem";
-            this.userSystemBindingSource.DataSource = this.libraryDBDataSet;
-            // 
-            // userSystemTableAdapter
-            // 
-            this.userSystemTableAdapter.ClearBeforeFill = true;
-            // 
             // fnameDataGridViewTextBoxColumn
             // 
             this.fnameDataGridViewTextBoxColumn.DataPropertyName = "Fname";
@@ -237,6 +226,20 @@
             this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
             this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
             // 
+            // userSystemBindingSource
+            // 
+            this.userSystemBindingSource.DataMember = "UserSystem";
+            this.userSystemBindingSource.DataSource = this.libraryDBDataSet;
+            // 
+            // libraryDBDataSet
+            // 
+            this.libraryDBDataSet.DataSetName = "libraryDBDataSet";
+            this.libraryDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // userSystemTableAdapter
+            // 
+            this.userSystemTableAdapter.ClearBeforeFill = true;
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -248,11 +251,47 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.Info;
+            this.button5.Location = new System.Drawing.Point(30, 532);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(166, 39);
+            this.button5.TabIndex = 16;
+            this.button5.Text = "Insert As admin";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.Info;
+            this.button6.Location = new System.Drawing.Point(221, 532);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(166, 39);
+            this.button6.TabIndex = 17;
+            this.button6.Text = "Insert As Reader";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.SystemColors.Info;
+            this.button7.Location = new System.Drawing.Point(404, 532);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(166, 39);
+            this.button7.TabIndex = 18;
+            this.button7.Text = "Insert As Author";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1043, 611);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
@@ -269,13 +308,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userSystemBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,6 +345,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bdateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
 

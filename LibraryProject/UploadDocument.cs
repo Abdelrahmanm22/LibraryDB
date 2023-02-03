@@ -24,7 +24,8 @@ namespace LibraryProject
             SqlCommand sqlCommand = new SqlCommand();
             sqlCommand.Connection = sqlConnection;
             sqlConnection.Open();
-            sqlCommand.CommandText = "INSERT INTO Document VALUES(" + textBox1.Text + ",'" + textBox2.Text + "'," + textBox3.Text + ",'"+ textBox4.Text+"',"+textBox5.Text+","+textBox6.Text+");";
+            sqlCommand.CommandText = "INSERT INTO Document VALUES(" + textBox1.Text + ",'" + textBox2.Text + "'," + textBox3.Text + ",'"+ textBox4.Text+"',"+textBox5.Text+","+textBox6.Text+","+textBox7.Text+");";
+
             sqlCommand.ExecuteNonQuery();
             sqlConnection.Close();
         }

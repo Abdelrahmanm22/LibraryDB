@@ -31,5 +31,19 @@ namespace LibraryProject
             this.documentTableAdapter.Fill(this.libraryDBDataSet.Document);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SQL_query sQL_Query = new SQL_query();
+            sQL_Query.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Category category = new Category();
+            category.Show();
+        }
     }
 }

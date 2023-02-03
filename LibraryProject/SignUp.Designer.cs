@@ -38,17 +38,17 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.libraryDBDataSet = new LibraryProject.libraryDBDataSet();
-            this.authenticationBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.authenticationTableAdapter = new LibraryProject.libraryDBDataSetTableAdapters.AuthenticationTableAdapter();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.authenticationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.libraryDBDataSet = new LibraryProject.libraryDBDataSet();
+            this.authenticationTableAdapter = new LibraryProject.libraryDBDataSetTableAdapters.AuthenticationTableAdapter();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.authenticationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -104,7 +104,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(127, 284);
+            this.button1.Location = new System.Drawing.Point(120, 311);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 49);
             this.button1.TabIndex = 6;
@@ -137,20 +137,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(359, 240);
             this.dataGridView1.TabIndex = 8;
             // 
-            // libraryDBDataSet
-            // 
-            this.libraryDBDataSet.DataSetName = "libraryDBDataSet";
-            this.libraryDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // authenticationBindingSource
-            // 
-            this.authenticationBindingSource.DataMember = "Authentication";
-            this.authenticationBindingSource.DataSource = this.libraryDBDataSet;
-            // 
-            // authenticationTableAdapter
-            // 
-            this.authenticationTableAdapter.ClearBeforeFill = true;
-            // 
             // usernameDataGridViewTextBoxColumn
             // 
             this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
@@ -168,6 +154,20 @@
             this.userIDDataGridViewTextBoxColumn.DataPropertyName = "UserID";
             this.userIDDataGridViewTextBoxColumn.HeaderText = "UserID";
             this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            // 
+            // authenticationBindingSource
+            // 
+            this.authenticationBindingSource.DataMember = "Authentication";
+            this.authenticationBindingSource.DataSource = this.libraryDBDataSet;
+            // 
+            // libraryDBDataSet
+            // 
+            this.libraryDBDataSet.DataSetName = "libraryDBDataSet";
+            this.libraryDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // authenticationTableAdapter
+            // 
+            this.authenticationTableAdapter.ClearBeforeFill = true;
             // 
             // button3
             // 
@@ -211,8 +211,8 @@
             this.Text = "SignUp";
             this.Load += new System.EventHandler(this.SignUp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.authenticationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

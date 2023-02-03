@@ -23,7 +23,7 @@ namespace LibraryProject
             // TODO: This line of code loads data into the 'libraryDBDataSet.Categorie' table. You can move, or remove it, as needed.
 
 
-            this.reportViewer1.RefreshReport();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

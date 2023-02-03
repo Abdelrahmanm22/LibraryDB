@@ -1,4 +1,5 @@
-﻿namespace LibraryProject
+﻿
+namespace LibraryProject
 {
     partial class Report
     {
@@ -28,17 +29,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.libraryDBDataSet = new LibraryProject.libraryDBDataSet();
+            this.SaleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SaleTableAdapter = new LibraryProject.libraryDBDataSetTableAdapters.SaleTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.SaleBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "LibraryProject.Report1.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(185, 86);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
+            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // libraryDBDataSet
+            // 
+            this.libraryDBDataSet.DataSetName = "libraryDBDataSet";
+            this.libraryDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // SaleBindingSource
+            // 
+            this.SaleBindingSource.DataMember = "Sale";
+            this.SaleBindingSource.DataSource = this.libraryDBDataSet;
+            // 
+            // SaleTableAdapter
+            // 
+            this.SaleTableAdapter.ClearBeforeFill = true;
             // 
             // Report
             // 
@@ -49,6 +74,8 @@
             this.Name = "Report";
             this.Text = "Report";
             this.Load += new System.EventHandler(this.Report_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -56,5 +83,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource SaleBindingSource;
+        private libraryDBDataSet libraryDBDataSet;
+        private libraryDBDataSetTableAdapters.SaleTableAdapter SaleTableAdapter;
     }
 }
